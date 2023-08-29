@@ -12,11 +12,11 @@ function Sub_Function(){
 
 function Multiply_Function(){
     var SimpleMath = 6 * 8;
-    document.getElementById("Math3").innerHTML = "6 * 8 = " + subtract;
+    document.getElementById("Math3").innerHTML = "6 * 8 = " + SimpleMath;
 }
 
 function Divide_Function(){
     var SimpleMath = 42/7;
-    document.getElementById("Math4").innerHTML = "42/7 = " + subtract;
+    document.getElementById("Math4").innerHTML = "42/7 = " + SimpleMath;
 }
 
