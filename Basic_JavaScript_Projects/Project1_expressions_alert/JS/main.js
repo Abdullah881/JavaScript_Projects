@@ -16,3 +16,8 @@ document.write(B);
 var student_1 = "Adam" , student_2 = "Paul" , student_2 = "Jake"; // declaring multiple variables
 
 document.write( 3 + 3); // solving and printing an expression 
+
+function First_Function() {
+    var str = " This is Button Text";
+    document.getElementById("Button_Text").innerHTML = str;
+}
