@@ -1,3 +1,5 @@
+
+// New Function for a new object of the animal class
 function  my_Dictionary() {
     var Animal = {
         species: "Dog",
