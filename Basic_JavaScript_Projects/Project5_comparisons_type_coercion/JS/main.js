@@ -9,5 +9,10 @@ document.write('\<br>')
 document.write(-2E310)
 document.write('\<br>')
 document.write(Number((document.getElementById("no").innerHTML)))
-
+document.write('\<br>')
+document.write(34>231)
+document.write('\<br>')
+document.write(-321<231)
+document.write('\<br>')
+console.log(34+234)
 
