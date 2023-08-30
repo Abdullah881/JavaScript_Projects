@@ -1,0 +1,6 @@
+document.write(typeof String(3))
+document.write('\<br>')
+document.write(isNaN(213))
+document.write('\<br>')
+document.write(isNaN('33s'))
+document.write('\<br>')
