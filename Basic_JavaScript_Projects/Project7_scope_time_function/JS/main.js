@@ -80,3 +80,8 @@ function String_Function(){
     var x = 198
     document.getElementById("num_to_str").innerHTML = x.toString();
 }
+
+function Precision_Function(){
+    var x = 123.826748912634
+    document.getElementById("Precision").innerHTML = x.toPrecision(7);
+}
