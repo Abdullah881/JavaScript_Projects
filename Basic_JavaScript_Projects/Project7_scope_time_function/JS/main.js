@@ -44,5 +44,21 @@ function Age_Function() {
     }
 }
 
+function Full_Sentence(){
+    var part_1 = "Hello My Name "
+    var part_2 = "is Luke Sky walker "
+    var part_3 = "and i am a Jedi"
+    var whole_sentence = part_1.concat(part_2 , part_3);
+    document.getElementById("Concatenate").innerHTML = whole_sentence;
+
+
+}
+
+function slice_function() {
+    var sentence = document.getElementById("Slice").innerHTML
+    sentence = sentence.slice(0,10);
+    document.getElementById("Slice").innerHTML = sentence
+
+}
 
 
