@@ -15,13 +15,18 @@ function Global_test(){
 }
 
 function Date_Function(){
-    if (new Date().getHours() < 18)
+    var Time = new Date().getHours(); 
+    if (0 < Time && Time < 11) //
     {
-        document.getElementById("Greeting").innerHTML = "Hello, How are you"
+        document.getElementById("Greeting").innerHTML = "Hello, Good Morning " + Time
+    }
+    else if (11 < Time && Time < 18)
+    {
+        document.getElementById("Greeting").innerHTML = "Hello, Good Afternoon " + Time
     }
     else 
     {
-        document.getElementById("Greeting").innerHTML = "Please Contact Again During Office hours"
+        document.getElementById("Greeting").innerHTML = "Hello, Good Evening " + Time
     }
     
 }
