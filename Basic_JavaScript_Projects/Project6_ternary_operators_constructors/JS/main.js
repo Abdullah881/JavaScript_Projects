@@ -26,3 +26,16 @@ function my_function() {
 // var true; 
 // document.write(true)
 // gives error
+//Nested Function
+//<p id="nested_function" onclick="Nest_Function()">Click Here</p>
+
+function Nest_Function() {
+    document.getElementById("nested_function").innerHTML = Count_Function()
+    function Count_Function() {
+        var num1 = 10 
+        var num2 = 12
+        var total = num2 + num1
+        return total
+    }
+
+}
