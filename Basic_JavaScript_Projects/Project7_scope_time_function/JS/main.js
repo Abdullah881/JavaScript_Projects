@@ -62,3 +62,21 @@ function slice_function() {
 }
 
 
+function Upper() {
+    var sentence = document.getElementById("UpperC").innerHTML
+    sentence = sentence.toUpperCase()
+    document.getElementById("UpperC").innerHTML = sentence
+
+}
+
+function Find_function() {
+    var sentence = document.getElementById("UpperC").innerHTML
+    sentence = sentence.search("jumper")
+    document.getElementById("Where").innerHTML = sentence
+
+}
+
+function String_Function(){
+    var x = 198
+    document.getElementById("num_to_str").innerHTML = x.toString();
+}
