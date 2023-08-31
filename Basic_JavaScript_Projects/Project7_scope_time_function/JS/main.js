@@ -17,12 +17,27 @@ function Global_test(){
 function Date_Function(){
     if (new Date().getHours() < 18)
     {
-        document.getElementById("Greeting").innerHTML = "Good Day"
+        document.getElementById("Greeting").innerHTML = "Hello, How are you"
+    }
+    else 
+    {
+        document.getElementById("Greeting").innerHTML = "Please Contact Again During Office hours"
     }
     
 }
 
-var time =  new Date().getHours()
-document.write(time)
+
+function Age_Function() {
+    Age = document.getElementById("Age").value;
+    if (Age > 18) 
+    {
+        document.getElementById("How_Old").innerHTML = "You are old enough to Vote"
+    }
+    else
+    {
+        document.getElementById("How_Old").innerHTML = "You are NOT old enough to Vote"
+    }
+}
+
 
 
