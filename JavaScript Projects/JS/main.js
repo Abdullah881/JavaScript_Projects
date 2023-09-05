@@ -34,3 +34,18 @@ function Hello_World_Function() {
     var A = document.getElementsByClassName("Click");
     A[1].innerHTML = "The Text Has Changed!";
 }
+
+
+// Drawing on Canvas with getContext()
+
+const c = document.getElementById("Canvas_Id");
+const ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(500, 150, 140, 0, 2 * Math.PI);
+ctx.moveTo(380, 220);
+ctx.lineTo(500, 10);
+ctx.lineTo(620, 220);
+ctx.moveTo(420, 150);
+ctx.lineTo(580, 150);
+ctx.strokeStyle = "red";
+ctx.stroke();
