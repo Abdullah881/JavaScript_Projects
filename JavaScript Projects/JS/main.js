@@ -38,9 +38,18 @@ function Hello_World_Function() {
 
 // Drawing on Canvas with getContext()
 
-const c = document.getElementById("Canvas_Id");
-const ctx = c.getContext("2d");
+const canvas = document.getElementById("Canvas_Id");
+const ctx = canvas.getContext("2d");
+
+const grd = ctx.createLinearGradient(0, 0, 1000, 0);
+grd.addColorStop(0, "black");
+grd.addColorStop(1, "white");
+
+ctx.fillStyle = grd;
+ctx.fillRect(1, 1, 999, 298);
+
 ctx.beginPath();
+ctx.lineWidth = 4;
 ctx.arc(500, 150, 140, 0, 2 * Math.PI);
 ctx.moveTo(380, 220);
 ctx.lineTo(500, 10);
@@ -49,3 +58,9 @@ ctx.moveTo(420, 150);
 ctx.lineTo(580, 150);
 ctx.strokeStyle = "red";
 ctx.stroke();
+
+
+
+
+
+
