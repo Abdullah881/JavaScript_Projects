@@ -1,3 +1,4 @@
+// Function which gets an input and compares it to a series of cases
 function Color_Function () {
     var Color_Output;
     var Colors = document.getElementById ("Color Input") .value;
@@ -28,7 +29,7 @@ function Color_Function () {
     document.getElementById ("Output"). innerHTML = Color_Output;
 }
 
-
+// Function which gets inner HTML s of all elements of the certain class and adds them to a list object A
 function Hello_World_Function() {
     var A = document.getElementsByClassName("Click");
     A[1].innerHTML = "The Text Has Changed!";
