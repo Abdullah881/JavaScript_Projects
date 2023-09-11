@@ -50,6 +50,8 @@ B--;
 
 // Displaying variables and random number
 document.write("<br>");
+document.write(++A);
+document.write("<br>");
 document.write(A);
 document.write("<br>");
 document.write(B);
