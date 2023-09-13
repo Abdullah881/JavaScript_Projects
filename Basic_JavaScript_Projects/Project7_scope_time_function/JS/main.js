@@ -83,5 +83,5 @@ function String_Function(){
 
 function Precision_Function(){
     var x = 123.826748912634
-    document.getElementById("Precision").innerHTML = x.toPrecision(7);
+    document.getElementById("Precision").innerHTML = x.toPrecision(2);
 }
