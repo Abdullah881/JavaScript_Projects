@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Virtual DOM Quiz</title>
+</head>
+<body>
+    <h1 style="text-align: center;">React Virtual DOM Quiz</h1>
+    <h1 style="text-align: center;">If you cheat, you are only hurting u=your self as their is no one competing against you but ur self</h1>
+    <form id="quizForm">
+        <ol>
+            <li>
+                <h3>1. What is the Virtual DOM (VDOM) in React?</h3>
+                <label>
+                    <input type="radio" name="q1" value="a"> a: The actual DOM elements displayed on the user's screen
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="b"> a: Lightweight copies of DOM objects stored in memory
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="c"> a: A direct representation of the HTML structure
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="d"> d: A method for rendering webpages faster
+                </label><br>
+            </li>
+            <li>
+                <h3>2. What does the term "diffing" refer to in the context of React's Virtual DOM?</h3>
+                <label>
+                    <input type="radio" name="q2" value="a"> a: A process for making VDOM objects lighter
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="b"> a: A technique for creating a simplified version of the DOM
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="c"> a: Comparing the previous VDOM with the current VDOM to find differences
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="d"> d: The process of updating the entire DOM tree
+                </label><br>
+            </li>
+            <li>
+                <h3>3. How does the Virtual DOM improve webpage rendering speed in React?</h3>
+                <label>
+                    <input type="radio" name="q3" value="a"> a: By rendering the entire DOM on every data change
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="b"> a: By making copies of the DOM on the user's screen
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="c"> a: By updating only the changed parts of the DOM
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="d"> d: By increasing the size of the DOM
+                </label><br>
+            </li>
+        </ol>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const answers = {
+                q1: "b",
+                q2: "c",
+                q3: "c"
+            };
+            let score = 0;
+            const incorrectAnswers = [];
+
+            for (let i = 1; i <= 3; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === answers[`q${i}`]) {
+                        score++;
+                    } else {
+                        incorrectAnswers.push(i);
+                    }
+                }
+            }
+
+            let message = `You scored ${score} out of 3.`;
+            if (incorrectAnswers.length > 0) {
+                message += `\nIncorrect answers for question(s): ${incorrectAnswers.join(", ")}`;
+            }
+            alert(message);
+        });
+
+
+
+    </script>
+</body>
+</html>
