@@ -1,0 +1,31 @@
+body {
+    opacity: 1;
+    transition: 2s opacity;
+    color: red;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+.moving_div1{
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+@keyframes my_move {
+  0%   {top: 0px; left: 0px; }
+  25%  {top: 0px; left: 450px; }
+  100% {top: 0px; left: 0px;}
+}
+.zoomer {
+    height: 451px;
+    width: 451px;
+    padding-left: 400px;
+}
+.zoomer:hover {
+
+    transform: scale(1.5);
+}
