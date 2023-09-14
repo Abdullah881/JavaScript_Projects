@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="XMI_Example"></p>
+    <script>
+      var XMI_Parser, XML_Document; // creates a text string
+      var Movie =
+        "<car>" +
+        "<name>Escape</name>" +
+        "<brand>Ford</brand>" +
+        "<type>SUV</type>" +
+        "<year>2002</year>" +
+        "<year>1993</year>" +
+        "</car>";
+
+      // creates an XML DOM parser
+      var XMLParser = new DOMParser();
+
+      // creates a new XML DOM object using the text string
+      var XMLDocument = XMLParser.parseFromString(Movie, "text/xml");
+
+      document.getElementById("XMI_Example").innerHTML =
+        XMLDocument.getElementsByTagName("year")[1].childNodes[0].nodeValue;
+    </script>
+  </body>
+</html>
