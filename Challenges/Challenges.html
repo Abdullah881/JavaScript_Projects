@@ -7,6 +7,7 @@
         <meta name="description" content="Template">
         <meta name="author" content="Abdullah Altaf">
         <link rel="stylesheet" href="Challenge.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
     </head>
     <body>
         <script> 
@@ -45,9 +46,25 @@
 
             }
 
+            $(document).ready(function() {
+                $("#slideshow > div:gt(0)").hide();
+
+                setInterval (function(){
+                    $("#slideshow > div:first")
+                    .fadeOut(1000)
+                    .next()
+                    .fadeIn(1000)
+                    .end()
+                    .appendTo('#slideshow');
+                    
+                }, 3000);
+            });
+
         
         </script>
-        <h1 style="font-size: 2vw;" >Challenges</h1>
+        <h1 style="font-size: 2vw; text-align: center;"  >Challenges</h1>
+        <button style="font-size: 2vw; position: fixed; bottom: 20px; right: 20px; width: 100px; height: 40px;" class="sticky" onclick="open_Form()">Contact</button>
+        <h5 style="text-align: center;"><a href="#Star_Wars">Section Link Example</a></h5>
         <br>
 
         <div style=" animation: my_move 5s 1;" class="moving_div1" >
@@ -55,7 +72,7 @@
         </div>
 
 
-        <div class="form-popup" id="my_form" style="text-align: center; display: none;" >
+        <div class="form-popup sticky" id="my_form" style="text-align: center; display: none; z-index: 10; top: 0;" >
             <form >
                 <label for="fname">First name:</label><br>
                 <input type="text" id="fname" name="fname"><br>
@@ -65,10 +82,42 @@
                 <button type="button" onclick="close_Form()">CANCEL</button>
             </form>
         </div>
-        <br><br>
+        <br><br><br><br><br><br><br><br>
         <div style="text-align: center;" class="zoomer">
-            <img src="image1.jpeg" height="500px" width="500px" >
+            <img src="image1.jpeg" height="450px" width="450px" >
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="Star_Wars">
+            <h3 style="text-align: center;">This is a linked Section</h3>
+            <p style="text-align: center;">
+                In a galaxy far far away,<br>
+                It is a period of civil war.<br>
+                Rebel spaceships, striking<br>
+                from a hidden base, have won<br>
+                their first victory against<br>
+                the evil Galactic Empire. 
+            </p>
+        </div>
+        <br><br>
+        <!-- Slide Show -->
+
+        <div id="slideshow" style="text-align: center; border: 1px solid black;">
+            <div>
+                <img src="who3.jpeg" alt="Doctor Who">
+            </div>
+            <div>
+                <img src="who1.jpeg" alt="Doctor Who">
+            </div>
+            <div>
+                <img src="who2.jpeg" alt="Doctor Who">
+            </div>
+        </div>
+
+
+        <!-- Slide Show -->
+        
+
+
 
 
     </body>
