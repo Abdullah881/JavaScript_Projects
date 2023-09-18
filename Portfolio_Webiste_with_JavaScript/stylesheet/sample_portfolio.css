@@ -365,6 +365,7 @@ footer {
 .form-popup {
     z-index: 8; /* This z-index ensures the contact form shows above all other elements on the page */
     display: none; /* Set the display to none, we will use JavaScript to show the contact form */
+    /* position: absolute;  The form stays in the bottom left location on startup and does not move when scrolled down */
     position: fixed; /* The form stays in the same location no matter what */
     bottom: .5vw; /* Slightly up from the bottom of the viewport */
     right: .5vw; /* Slightly in from the right side of the viewport */
